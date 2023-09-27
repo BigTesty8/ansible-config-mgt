@@ -84,8 +84,8 @@ nginx_upstreams:
    strategy: "ip_hash" # "least_conn", etc.
    keepalive: 16 # optional
    servers:
-     - "172.31.42.153 weight=3"
-     - "172.31.43.232 weight=3"
+     - "172.31.39.156 weight=3"
+     - "172.31.44.223 weight=3"
 
 
 nginx_log_format: |-
