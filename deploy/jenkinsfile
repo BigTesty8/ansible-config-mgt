@@ -46,8 +46,6 @@ stage('Deploy') {
     stage("clean up") {
        steps {
         cleanWs()
-     }
+      }
     }
-
-    }
-}   
+  }   
