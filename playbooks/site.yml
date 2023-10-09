@@ -5,7 +5,7 @@
 #    - import_playbook: ../static-assignments/database.yml
 
 - hosts: nginx
-  name: nginx assignment
+- name: nginx assignment
   import_playbook: ../static-assignments/nginx.yml
 
 # - hosts: artifactory
