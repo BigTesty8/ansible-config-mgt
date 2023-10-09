@@ -4,10 +4,10 @@
 #  tasks:
 #    - import_playbook: ../static-assignments/database.yml
 
-- hosts: nginx
-  name: nginx assignment
-  import_playbook: ../static-assignments/nginx.yml
-
+- name: nginx assignment
+  hosts: nginx
+  tasks:
+    - import_playbook: ../static-assignments/nginx.yml
 # - hosts: artifactory
 # - name: artifactory assignment
 #   ansible.builtin.import_playbook: ../static-assignments/artifactory.yml
