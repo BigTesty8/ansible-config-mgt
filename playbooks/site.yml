@@ -7,7 +7,7 @@
 - hosts: nginx
   name: nginx assignment
   tasks:
-    - include_playbook: ../static-assignments/nginx.yml
+    - import_playbook: ../static-assignments/nginx.yml
 
 # - hosts: artifactory
 # - name: artifactory assignment
