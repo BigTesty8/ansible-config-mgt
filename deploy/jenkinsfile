@@ -11,12 +11,12 @@ pipeline {
            dir("${WORKSPACE}") {
              deleteDir()
             }
-         }
-      }
-
-     stage('Checkout SCM') {
-        steps{
-           git branch: 'feature/jenkinspipeline-stages', url: 'https://github.com/UzonduEgbombah/ansible-config-mgt.git'    
+          }
+        }
+    stage('Build') {
+      steps {
+        script {
+          sh 'echo "Building Stage"'
         }
       }
 
@@ -39,7 +39,12 @@ pipeline {
        cleanWs(cleanWhenAborted: true, cleanWhenFailure: true, cleanWhenNotBuilt: true, cleanWhenUnstable: true, deleteDirs: true)
       }
     }
-  }
 
-}
+    stage("clean Up"){
+       steps {
+        cleanWs()
+     }
+    }
     
+    }
+}    
