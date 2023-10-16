@@ -2,7 +2,11 @@
  - hosts: db
  - name: database assignment
    import_playbook: ../static-assignments/database.yml
-
+   
+ - name: Include OS-specific variables.
+  import_vars:
+    file: /home/ubuntu/ansible-config-mgt/roles/mysql/vars/Debian.yml
+    
 # - hosts: nginx
 # - name: nginx assignment
 #   import_playbook: ../static-assignments/nginx.yml
