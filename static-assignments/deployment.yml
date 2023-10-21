@@ -49,10 +49,10 @@
 
     - name: Download the artifact
       get_url:
-        url: http://54.204.113.247:8082/artifactory/Testimony/php-todo
+        url: http://54.144.99.204:8082/artifactory/Testimony/php-todo
         dest: /home/ec2-user/
         url_username: admin
-        url_password: cmVmdGtuOjAxOjE3MjkzNTkyMjU6MDBUbmFvdTN1VlBmcVVmOENsRTVCRDRtTzRj
+        url_password: cmVmdGtuOjAxOjE3Mjk0Mjc3MzU6a3BKdmJueFMyNDRESE4zUjhkbW4zN0puWjhC
 
 
     - name: unzip the artifacts
