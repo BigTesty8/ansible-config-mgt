@@ -5,13 +5,12 @@
 
   tasks:
     - name: install remi and rhel repo
-      yum:
-        name: 
-          - epel-release-latest-9.noarch
+      ansible.builtin.yum:
+        name:
+          - https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
           - dnf-utils
-          - remi-release-9.9-1.el9.remi.noarch
+          - http://rpms.remirepo.net/enterprise/remi-release-9.rpm
         disable_gpg_check: yes
-
     
     - name: install httpd on the webserver
       yum:
